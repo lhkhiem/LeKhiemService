@@ -1,0 +1,82 @@
+:root {
+  /* Brand Colors - Dark Tech Theme */
+  --bg-main: #0a0f16;       /* Deep dark blue/black */
+  --bg-surface: #131c29;    /* Slightly lighter surface */
+  --bg-surface-hover: #1a2636;
+  
+  --text-primary: #f0f4f8;  /* Off-white */
+  --text-secondary: #94a3b8; /* Slate gray */
+  
+  --accent-primary: #10b981; /* Emerald green (Tech feel) */
+  --accent-glow: rgba(16, 185, 129, 0.3);
+  --accent-secondary: #3b82f6; /* Blue for secondary actions */
+  
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 80px;
+
+  /* Fonts will be inherited from layout.tsx (Inter/Outfit) */
+}
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Reusable Utility Classes */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+/* Fancy Glowing Effect */
+.glow-text {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+}
