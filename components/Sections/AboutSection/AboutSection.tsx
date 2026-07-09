@@ -2,9 +2,16 @@
 
 import { motion } from 'framer-motion';
 import { Code, Layout, Lightbulb } from 'lucide-react';
+import { siteData } from '../../../lib/data';
 import styles from './AboutSection.module.css';
 
+// ... (other imports are already there, we just need to map dynamic icons)
+const iconMap: any = {
+  Code, Layout, Lightbulb
+};
+
 export default function AboutSection() {
+  const { about } = siteData;
   const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
@@ -30,8 +37,8 @@ export default function AboutSection() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className={styles.sectionTitle}>Về <span className="glow-text">Tôi</span></h2>
-          <p className={styles.sectionSubtitle}>Kết hợp thẩm mỹ thiết kế và tư duy lập trình</p>
+          <h2 className={styles.sectionTitle}>{about.title} <span className="glow-text">{about.titleHighlight}</span></h2>
+          <p className={styles.sectionSubtitle}>{about.subtitle}</p>
         </motion.div>
 
         <div className={styles.aboutContent}>
@@ -55,35 +62,23 @@ export default function AboutSection() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
-            <motion.p variants={itemVariants} className={styles.paragraph}>
-              Với nhiều năm kinh nghiệm trong lĩnh vực phát triển Web, tôi không chỉ viết code mà còn tạo ra <strong>trải nghiệm</strong>. Tôi tin rằng một giao diện đẹp phải đi đôi với hiệu năng tối ưu và cấu trúc chặt chẽ.
-            </motion.p>
-            <motion.p variants={itemVariants} className={styles.paragraph}>
-              Mục tiêu của tôi là giúp các cá nhân và doanh nghiệp xây dựng sự hiện diện mạnh mẽ, chuyên nghiệp trên nền tảng số thông qua những sản phẩm vượt trên cả sự mong đợi.
-            </motion.p>
+            {about.paragraphs.map((para, idx) => (
+              <motion.p key={idx} variants={itemVariants} className={styles.paragraph} dangerouslySetInnerHTML={{ __html: para }} />
+            ))}
 
             <motion.div variants={itemVariants} className={styles.coreValues}>
-              <div className={styles.valueItem}>
-                <div className={styles.iconBox}><Layout size={24} /></div>
-                <div>
-                  <h3>Thiết kế Độc bản</h3>
-                  <p>Giao diện được thiết kế may đo riêng biệt, không dùng template rập khuôn.</p>
-                </div>
-              </div>
-              <div className={styles.valueItem}>
-                <div className={styles.iconBox}><Code size={24} /></div>
-                <div>
-                  <h3>Code Sạch & Tối ưu</h3>
-                  <p>Chuẩn SEO, tốc độ tải trang nhanh nhạy trên mọi thiết bị di động.</p>
-                </div>
-              </div>
-              <div className={styles.valueItem}>
-                <div className={styles.iconBox}><Lightbulb size={24} /></div>
-                <div>
-                  <h3>Giải pháp Thực tế</h3>
-                  <p>Tập trung vào hiệu quả chuyển đổi và giải quyết bài toán kinh doanh.</p>
-                </div>
-              </div>
+              {about.coreValues.map((val, idx) => {
+                const IconComponent = iconMap[val.iconName];
+                return (
+                  <div key={idx} className={styles.valueItem}>
+                    <div className={styles.iconBox}>{IconComponent && <IconComponent size={24} />}</div>
+                    <div>
+                      <h3>{val.title}</h3>
+                      <p>{val.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </motion.div>
           </motion.div>
         </div>

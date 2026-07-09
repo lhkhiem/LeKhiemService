@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { siteData } from '../../lib/data';
 import styles from './Header.module.css';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { header } = siteData;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,16 +26,15 @@ export default function Header() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo}>
-          <span>Lê</span>Khiêm<span className="glow-text">.</span>
+          <span>{header.logoText1}</span>{header.logoText2}<span className="glow-text">.</span>
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.navList}>
-            <li><a href="#about" className={styles.navLink}>Giới thiệu</a></li>
-            <li><a href="#services" className={styles.navLink}>Dịch vụ</a></li>
-            <li><a href="#portfolio" className={styles.navLink}>Dự án</a></li>
-            <li><a href="#process" className={styles.navLink}>Quy trình</a></li>
+            {header.navLinks.map((link, idx) => (
+              <li key={idx}><a href={link.href} className={styles.navLink}>{link.name}</a></li>
+            ))}
           </ul>
-          <a href="#contact" className={styles.ctaButton}>Liên hệ ngay</a>
+          <a href="#contact" className={styles.ctaButton}>{header.ctaButton}</a>
         </nav>
       </div>
     </header>

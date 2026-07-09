@@ -1,42 +1,44 @@
 import Link from 'next/link';
+import { siteData } from '../../lib/data';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+  const { footer, header } = siteData;
+
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContent}`}>
         <div className={styles.footerBrand}>
           <Link href="/" className={styles.logo}>
-            <span>Lê</span>Khiêm<span className="glow-text">.</span>
+            <span>{header.logoText1}</span>{header.logoText2}<span className="glow-text">.</span>
           </Link>
           <p className={styles.description}>
-            Chuyên gia thiết kế & phát triển giao diện web, mang đến giải pháp số toàn diện và tối ưu trải nghiệm người dùng.
+            {footer.description}
           </p>
         </div>
         
         <div className={styles.footerLinks}>
-          <h4 className={styles.columnTitle}>Liên Kết Nhanh</h4>
+          <h4 className={styles.columnTitle}>{footer.quickLinksTitle}</h4>
           <ul>
-            <li><a href="#about">Giới thiệu</a></li>
-            <li><a href="#services">Dịch vụ</a></li>
-            <li><a href="#portfolio">Dự án</a></li>
-            <li><a href="#process">Quy trình</a></li>
+            {header.navLinks.map((link, idx) => (
+              <li key={idx}><a href={link.href}>{link.name}</a></li>
+            ))}
           </ul>
         </div>
         
         <div className={styles.footerContact}>
-          <h4 className={styles.columnTitle}>Liên Hệ</h4>
+          <h4 className={styles.columnTitle}>{footer.contactTitle}</h4>
           <ul>
-            <li>Email: hi@lekhiem.com</li>
-            <li>Điện thoại: 0999.999.999</li>
-            <li>Địa chỉ: TP. Hồ Chí Minh, Việt Nam</li>
+            <li>Email: {footer.email}</li>
+            <li>Điện thoại: {footer.phone}</li>
+            <li>Địa chỉ: {footer.address}</li>
           </ul>
         </div>
       </div>
       
       <div className={styles.footerBottom}>
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} Lê Khiêm. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {footer.copyright}</p>
         </div>
       </div>
     </footer>
