@@ -10,7 +10,7 @@ export const siteData = {
     ],
     ctaButton: "Liên hệ ngay"
   },
-  
+
   hero: {
     greeting: "👋 Xin chào, tôi là",
     title: "Lê Khiêm",
@@ -27,7 +27,7 @@ export const siteData = {
     titleHighlight: "Tôi",
     subtitle: "Kết hợp thẩm mỹ thiết kế và tư duy lập trình",
     paragraphs: [
-      "Với nhiều năm kinh nghiệm trong lĩnh vực phát triển Web, tôi không chỉ viết code mà còn tạo ra trải nghiệm. Tôi tin rằng một giao diện đẹp phải đi đôi với hiệu năng tối ưu và cấu trúc chặt chẽ.",
+      "Với kinh nghiệm trong lĩnh vực phát triển Web, tôi không chỉ viết code mà còn tạo ra trải nghiệm. Tôi tin rằng một giao diện đẹp phải đi đôi với hiệu năng tối ưu và cấu trúc chặt chẽ.",
       "Mục tiêu của tôi là giúp các cá nhân và doanh nghiệp xây dựng sự hiện diện mạnh mẽ, chuyên nghiệp trên nền tảng số thông qua những sản phẩm vượt trên cả sự mong đợi."
     ],
     coreValues: [
@@ -80,9 +80,9 @@ export const siteData = {
     description: "Chuyên gia thiết kế & phát triển giao diện web, mang đến giải pháp số toàn diện và tối ưu trải nghiệm người dùng.",
     quickLinksTitle: "Liên Kết Nhanh",
     contactTitle: "Liên Hệ",
-    email: "hi@lekhiem.com",
-    phone: "0999.999.999",
-    address: "TP. Hồ Chí Minh, Việt Nam",
+    email: "hoangkhiem.dev@gmail.com",
+    phone: "0886939879",
+    address: "Rạch Giá, An Giang, Việt Nam",
     copyright: "Lê Khiêm. All rights reserved."
   }
 };
