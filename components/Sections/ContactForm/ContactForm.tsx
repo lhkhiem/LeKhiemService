@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Loader2, CheckCircle2 } from 'lucide-react';
 import styles from './ContactForm.module.css';
+import { siteData } from '../../../lib/data';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
@@ -69,21 +70,21 @@ export default function ContactForm() {
                 <div className={styles.iconBox}><Phone size={20} /></div>
                 <div>
                   <h4>Điện thoại / Zalo</h4>
-                  <p>0999.999.999</p>
+                  <p>{siteData.footer.phone}</p>
                 </div>
               </div>
               <div className={styles.infoItem}>
                 <div className={styles.iconBox}><Mail size={20} /></div>
                 <div>
                   <h4>Email</h4>
-                  <p>hi@lekhiem.com</p>
+                  <p>{siteData.footer.email}</p>
                 </div>
               </div>
               <div className={styles.infoItem}>
                 <div className={styles.iconBox}><MapPin size={20} /></div>
                 <div>
                   <h4>Khu vực</h4>
-                  <p>Hồ Chí Minh, Việt Nam (Nhận làm việc từ xa)</p>
+                  <p>{siteData.footer.address}</p>
                 </div>
               </div>
             </div>
