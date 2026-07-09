@@ -1,14 +1,42 @@
 "use client";
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Loader2, CheckCircle2 } from 'lucide-react';
 import styles from './ContactForm.module.css';
 
 export default function ContactForm() {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send data to an API
-    alert('Cảm ơn bạn! Thông tin đã được gửi thành công.');
+    setStatus('loading');
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   return (
@@ -70,24 +98,35 @@ export default function ContactForm() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className={styles.formGroup}>
-              <label htmlFor="name">Họ và Tên</label>
-              <input type="text" id="name" required placeholder="Ví dụ: Nguyễn Văn A" />
+              <label htmlFor="name">Họ và Tên <span style={{color: 'red'}}>*</span></label>
+              <input type="text" id="name" required placeholder="Ví dụ: Nguyễn Văn A" value={formData.name} onChange={handleChange} />
+            </div>
+            
+            <div className={styles.formGroup}>
+              <label htmlFor="email">Email <span style={{color: 'red'}}>*</span></label>
+              <input type="email" id="email" required placeholder="email@example.com" value={formData.email} onChange={handleChange} />
             </div>
             
             <div className={styles.formGroup}>
               <label htmlFor="phone">Số điện thoại</label>
-              <input type="tel" id="phone" required placeholder="09xxxxxxx" />
+              <input type="tel" id="phone" placeholder="09xxxxxxx" value={formData.phone} onChange={handleChange} />
             </div>
             
             <div className={styles.formGroup}>
-              <label htmlFor="message">Nhu cầu của bạn (Tùy chọn)</label>
-              <textarea id="message" rows={4} placeholder="Hãy mô tả ngắn gọn về dự án của bạn..."></textarea>
+              <label htmlFor="message">Nhu cầu của bạn (Tùy chọn) <span style={{color: 'red'}}>*</span></label>
+              <textarea id="message" rows={4} required placeholder="Hãy mô tả ngắn gọn về dự án của bạn..." value={formData.message} onChange={handleChange}></textarea>
             </div>
             
-            <button type="submit" className={styles.submitBtn}>
-              <span>Gửi Yêu Cầu</span>
-              <Send size={18} />
+            <button type="submit" className={styles.submitBtn} disabled={status === 'loading'}>
+              {status === 'loading' ? (
+                <><span>Đang gửi...</span><Loader2 size={18} className="animate-spin" /></>
+              ) : status === 'success' ? (
+                <><span>Gửi Thành Công!</span><CheckCircle2 size={18} /></>
+              ) : (
+                <><span>Gửi Yêu Cầu</span><Send size={18} /></>
+              )}
             </button>
+            {status === 'error' && <p style={{color: 'red', marginTop: '10px', fontSize: '14px'}}>Có lỗi xảy ra khi gửi. Vui lòng thử lại sau.</p>}
           </motion.form>
         </div>
       </div>
