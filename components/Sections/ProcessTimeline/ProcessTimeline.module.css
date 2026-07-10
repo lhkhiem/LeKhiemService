@@ -106,22 +106,26 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .timelineLine {
-    left: 40px;
+    left: 20px;
   }
   
   .timelineItem {
     justify-content: flex-start;
+    margin-bottom: 40px;
   }
   
   .timelineIcon {
-    margin-left: 5px; /* (40px - 70px/2) = 5px */
-    width: 60px;
-    height: 60px;
+    position: absolute;
+    left: 20px;
+    transform: translateX(-50%);
+    margin-left: 0;
+    width: 50px;
+    height: 50px;
   }
   
   .timelineIcon svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
   
   .timelineContent.left, .timelineContent.right {
@@ -129,7 +133,23 @@
     position: relative;
     right: auto;
     left: auto;
-    padding-left: 90px;
+    padding-left: 60px;
     padding-right: 0;
+  }
+  
+  .contentCard {
+    padding: 20px;
+  }
+  
+  .contentCard h3 {
+    font-size: 18px;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+  
+  .sectionTitle {
+    font-size: 32px;
   }
 }

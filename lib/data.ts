@@ -16,8 +16,8 @@ export const siteData = {
     title: "Lê Khiêm",
     subtitle: "Chuyên gia Kiến tạo",
     subtitleHighlight: "Giao diện Số",
-    subtitleEnd: "& Trải nghiệm Người dùng",
-    description: "Tôi thiết kế và phát triển các trang web hiện đại, tối ưu tốc độ và mang đậm dấu ấn thương hiệu cá nhân/doanh nghiệp. Giúp bạn nâng tầm hiện diện trên Internet.",
+    subtitleEnd: "& Dịch vụ IT Helpdesk",
+    description: "Tôi thiết kế và phát triển các trang web hiện đại, tối ưu tốc độ và cung cấp dịch vụ IT Helpdesk chuyên nghiệp. Giúp cá nhân/doanh nghiệp nâng tầm hiện diện và vận hành trơn tru, bứt phá trong kỷ nguyên số.",
     primaryBtn: "Xem Dự Án",
     secondaryBtn: "Liên Hệ Ngay"
   },
@@ -45,7 +45,8 @@ export const siteData = {
       { iconName: "MonitorSmartphone", title: "Thiết kế Web Responsive", desc: "Tạo ra các trang web tương thích hoàn hảo trên mọi thiết bị, từ điện thoại đến màn hình desktop siêu lớn." },
       { iconName: "Palette", title: "UI/UX & Branding", desc: "Nghiên cứu và thiết kế trải nghiệm người dùng, mang lại giao diện trực quan, bắt mắt và giữ chân khách hàng." },
       { iconName: "Search", title: "Tối ưu chuẩn SEO", desc: "Cấu trúc website thân thiện với bộ máy tìm kiếm (Google), giúp tăng thứ hạng tự nhiên cho doanh nghiệp." },
-      { iconName: "Rocket", title: "Tối ưu Hiệu năng (Speed)", desc: "Áp dụng các công nghệ hiện đại nhất (Next.js, Server Components) để web load trong nháy mắt." }
+      { iconName: "Rocket", title: "Tối ưu Hiệu năng (Speed)", desc: "Áp dụng các công nghệ hiện đại nhất (Next.js, Server Components) để web load trong nháy mắt." },
+      { iconName: "Headset", title: "IT Helpdesk & Hỗ trợ từ xa", desc: "Khắc phục sự cố máy tính, phần mềm, mạng nội bộ chuyên nghiệp. Ưu tiên xử lý nhanh chóng qua kết nối từ xa (Remote)." }
     ]
   },
 

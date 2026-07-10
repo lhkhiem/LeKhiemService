@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { MonitorSmartphone, Search, Palette, Rocket } from 'lucide-react';
+import { MonitorSmartphone, Search, Palette, Rocket, Headset } from 'lucide-react';
 import { siteData } from '../../../lib/data';
 import styles from './ServicesGrid.module.css';
 
 const iconMap: any = {
-  MonitorSmartphone, Palette, Search, Rocket
+  MonitorSmartphone, Palette, Search, Rocket, Headset
 };
 
 export default function ServicesGrid() {
