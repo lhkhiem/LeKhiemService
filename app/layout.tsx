@@ -16,6 +16,14 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Lê Khiêm | Chuyên gia Giao diện & Dịch vụ số",
   description: "Trang thông tin cá nhân và portfolio giới thiệu dịch vụ của Lê Khiêm.",
+  icons: {
+    icon: [
+      { url: '/logo.png?v=2', type: 'image/png' },
+      { url: '/favicon.ico?v=2' },
+    ],
+    shortcut: '/logo.png?v=2',
+    apple: '/logo.png?v=2',
+  },
 };
 
 export default function RootLayout({

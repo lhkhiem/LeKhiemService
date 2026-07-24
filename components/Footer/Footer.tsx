@@ -13,7 +13,11 @@ export default function Footer() {
       <div className={`container ${styles.footerContent}`}>
         <div className={styles.footerBrand}>
           <Link href="/" className={styles.logo}>
-            <span>{header.logoText1}</span>{header.logoText2}<span className="glow-text">.</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.png" alt="Lê Khiêm Logo" className={styles.logoImg} />
+            <div>
+              <span>{header.logoText1}</span>{header.logoText2}<span className="glow-text">.</span>
+            </div>
           </Link>
           <p className={styles.description}>
             {footer.description}

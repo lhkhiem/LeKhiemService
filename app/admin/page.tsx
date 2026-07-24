@@ -13,7 +13,7 @@ import PortfolioForm from '@/components/Admin/forms/PortfolioForm';
 import ProcessForm from '@/components/Admin/forms/ProcessForm';
 import FooterForm from '@/components/Admin/forms/FooterForm';
 import SettingsForm from '@/components/Admin/forms/SettingsForm';
-import { Save, Loader2, CheckCircle2, AlertCircle, Shield } from 'lucide-react';
+import { Save, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 
 export default function AdminPage() {
   const { siteData, isLoading, isSaving, saveData, resetToDefault } = useContent();
@@ -34,7 +34,6 @@ export default function AdminPage() {
   const [prevSiteData, setPrevSiteData] = useState<SiteData>(siteData);
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
 
-  // Sync draftData during render when siteData updates from server
   if (siteData !== prevSiteData) {
     setPrevSiteData(siteData);
     setDraftData(siteData);
@@ -102,8 +101,9 @@ export default function AdminPage() {
       <div className={styles.authContainer}>
         <div className={styles.loginCard}>
           <div className={styles.loginHeader}>
-            <div className={styles.loginIcon}>
-              <Shield size={32} />
+            <div className={styles.loginIcon} style={{ background: 'transparent', border: 'none' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.png" alt="Lê Khiêm Logo" style={{ width: '60px', height: '60px', borderRadius: '14px', boxShadow: '0 0 20px rgba(0, 242, 254, 0.4)' }} />
             </div>
             <h1 className={styles.loginTitle}>Admin Login</h1>
             <p className={styles.loginSub}>Đăng nhập để quản lý nội dung các section</p>

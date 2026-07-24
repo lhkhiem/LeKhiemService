@@ -33,6 +33,20 @@
   letter-spacing: -0.5px;
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.logoImg {
+  height: 38px;
+  width: 38px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logoImg {
+  transform: scale(1.08) rotate(3deg);
 }
 
 .logo span {
@@ -78,6 +92,6 @@
 
 @media (max-width: 768px) {
   .navList {
-    display: none; /* Mobile menu requires a hamburger, we'll keep it simple for now */
+    display: none;
   }
 }

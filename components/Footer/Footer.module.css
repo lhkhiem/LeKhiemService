@@ -16,8 +16,18 @@
   font-size: 32px;
   font-weight: 700;
   letter-spacing: -0.5px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 20px;
+}
+
+.logoImg {
+  height: 44px;
+  width: 44px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.3);
 }
 
 .logo span:not(.glow-text) {

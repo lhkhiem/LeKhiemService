@@ -27,7 +27,11 @@ export default function Header() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo}>
-          <span>{header.logoText1}</span>{header.logoText2}<span className="glow-text">.</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.png" alt="Lê Khiêm Logo" className={styles.logoImg} />
+          <div>
+            <span>{header.logoText1}</span>{header.logoText2}<span className="glow-text">.</span>
+          </div>
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.navList}>
