@@ -1,15 +1,12 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Search, PenTool, Code, CheckCircle } from 'lucide-react';
-import { siteData } from '../../../lib/data';
+import { useContent } from '@/context/ContentContext';
+import { DynamicIcon } from '@/components/Admin/IconPicker';
 import styles from './ProcessTimeline.module.css';
 
-const iconMap: any = {
-  Search, PenTool, Code, CheckCircle
-};
-
 export default function ProcessTimeline() {
+  const { siteData } = useContent();
   const { process } = siteData;
 
   return (
@@ -37,35 +34,32 @@ export default function ProcessTimeline() {
             />
           </div>
           
-          {process.steps.map((step, index) => {
-            const IconComponent = iconMap[step.iconName];
-            return (
-              <div key={index} className={styles.timelineItem}>
-                <motion.div 
-                  className={styles.timelineIcon}
-                  initial={{ scale: 0, opacity: 0, backgroundColor: 'var(--bg-main)' }}
-                  whileInView={{ scale: 1, opacity: 1, backgroundColor: 'var(--accent-primary)' }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: index * 0.3 }}
-                >
-                  {IconComponent && <IconComponent size={28} />}
-                </motion.div>
-                
-                <motion.div 
-                  className={`${styles.timelineContent} ${index % 2 === 0 ? styles.left : styles.right}`}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.6, delay: index * 0.3 + 0.2 }}
-                >
-                  <div className={styles.contentCard}>
-                    <h3>{step.title}</h3>
-                    <p>{step.desc}</p>
-                  </div>
-                </motion.div>
-              </div>
-            );
-          })}
+          {process.steps.map((step, index) => (
+            <div key={index} className={styles.timelineItem}>
+              <motion.div 
+                className={styles.timelineIcon}
+                initial={{ scale: 0, opacity: 0, backgroundColor: 'var(--bg-main)' }}
+                whileInView={{ scale: 1, opacity: 1, backgroundColor: 'var(--accent-primary)' }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.3 }}
+              >
+                <DynamicIcon name={step.iconName} size={28} />
+              </motion.div>
+              
+              <motion.div 
+                className={`${styles.timelineContent} ${index % 2 === 0 ? styles.left : styles.right}`}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: index * 0.3 + 0.2 }}
+              >
+                <div className={styles.contentCard}>
+                  <h3>{step.title}</h3>
+                  <p>{step.desc}</p>
+                </div>
+              </motion.div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

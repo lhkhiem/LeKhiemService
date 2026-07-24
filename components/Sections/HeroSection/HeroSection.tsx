@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { siteData } from '../../../lib/data';
+import { useContent } from '@/context/ContentContext';
 import styles from './HeroSection.module.css';
 
 const networkNodes = [
@@ -39,14 +39,13 @@ const networkConnections = [
 export default function HeroSection() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+  const { siteData } = useContent();
   const { hero } = siteData;
 
-  // Mượt mà hóa chuyển động chuột
   const springConfig = { damping: 25, stiffness: 150, mass: 0.5 };
   const smoothX = useSpring(mouseX, springConfig);
   const smoothY = useSpring(mouseY, springConfig);
 
-  // Giới hạn góc xoay 3D (±25 độ)
   const rotateX = useTransform(smoothY, [-0.5, 0.5], [25, -25]);
   const rotateY = useTransform(smoothX, [-0.5, 0.5], [-25, 25]);
 
@@ -119,7 +118,6 @@ export default function HeroSection() {
           </motion.div>
         </motion.div>
         
-        {/* Visual Section */}
         <motion.div 
           className={styles.heroVisual}
           initial={{ opacity: 0, scale: 0.8 }}
@@ -139,7 +137,6 @@ export default function HeroSection() {
               cursor: "pointer"
             }}
           >
-            {/* Tương tác 3D HUD (Holographic Head-Up Display) */}
             <div className={styles.networkContainer} style={{ transform: "translateZ(60px)" }}>
               <svg viewBox="0 0 200 200" className={styles.networkSvg}>
                 <g className={styles.connections}>
@@ -172,7 +169,6 @@ export default function HeroSection() {
                 </g>
               </svg>
             </div>
-            
           </motion.div>
         </motion.div>
       </div>

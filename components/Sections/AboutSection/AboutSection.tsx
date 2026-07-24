@@ -1,18 +1,15 @@
 "use client";
 
-import { motion } from 'framer-motion';
-import { Code, Layout, Lightbulb } from 'lucide-react';
-import { siteData } from '../../../lib/data';
+import { motion, Variants } from 'framer-motion';
+import { useContent } from '@/context/ContentContext';
+import { DynamicIcon } from '@/components/Admin/IconPicker';
 import styles from './AboutSection.module.css';
 
-// ... (other imports are already there, we just need to map dynamic icons)
-const iconMap: any = {
-  Code, Layout, Lightbulb
-};
-
 export default function AboutSection() {
+  const { siteData } = useContent();
   const { about } = siteData;
-  const containerVariants: any = {
+
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -22,7 +19,7 @@ export default function AboutSection() {
     }
   };
 
-  const itemVariants: any = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
@@ -49,7 +46,6 @@ export default function AboutSection() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            {/* Real photo can go here */}
             <div className={styles.photoPlaceholder}>
               <div className={styles.overlay}></div>
             </div>
@@ -67,18 +63,17 @@ export default function AboutSection() {
             ))}
 
             <motion.div variants={itemVariants} className={styles.coreValues}>
-              {about.coreValues.map((val, idx) => {
-                const IconComponent = iconMap[val.iconName];
-                return (
-                  <div key={idx} className={styles.valueItem}>
-                    <div className={styles.iconBox}>{IconComponent && <IconComponent size={24} />}</div>
-                    <div>
-                      <h3>{val.title}</h3>
-                      <p>{val.desc}</p>
-                    </div>
+              {about.coreValues.map((val, idx) => (
+                <div key={idx} className={styles.valueItem}>
+                  <div className={styles.iconBox}>
+                    <DynamicIcon name={val.iconName} size={24} />
                   </div>
-                );
-              })}
+                  <div>
+                    <h3>{val.title}</h3>
+                    <p>{val.desc}</p>
+                  </div>
+                </div>
+              ))}
             </motion.div>
           </motion.div>
         </div>

@@ -1,4 +1,102 @@
-export const siteData = {
+export interface NavLink {
+  name: string;
+  href: string;
+}
+
+export interface HeaderData {
+  logoText1: string;
+  logoText2: string;
+  navLinks: NavLink[];
+  ctaButton: string;
+}
+
+export interface HeroData {
+  greeting: string;
+  title: string;
+  subtitle: string;
+  subtitleHighlight: string;
+  subtitleEnd: string;
+  description: string;
+  primaryBtn: string;
+  secondaryBtn: string;
+}
+
+export interface CoreValue {
+  iconName: string;
+  title: string;
+  desc: string;
+}
+
+export interface AboutData {
+  title: string;
+  titleHighlight: string;
+  subtitle: string;
+  paragraphs: string[];
+  coreValues: CoreValue[];
+}
+
+export interface ServiceItem {
+  iconName: string;
+  title: string;
+  desc: string;
+}
+
+export interface ServicesData {
+  title: string;
+  titleHighlight: string;
+  subtitle: string;
+  items: ServiceItem[];
+}
+
+export interface ProjectItem {
+  id: number;
+  title: string;
+  category: string;
+  img: string;
+}
+
+export interface PortfolioData {
+  title: string;
+  titleHighlight: string;
+  subtitle: string;
+  categories: string[];
+  projects: ProjectItem[];
+}
+
+export interface ProcessStep {
+  iconName: string;
+  title: string;
+  desc: string;
+}
+
+export interface ProcessData {
+  title: string;
+  titleHighlight: string;
+  subtitle: string;
+  steps: ProcessStep[];
+}
+
+export interface FooterData {
+  description: string;
+  quickLinksTitle: string;
+  contactTitle: string;
+  email: string;
+  phone: string;
+  address: string;
+  copyright: string;
+}
+
+export interface SiteData {
+  header: HeaderData;
+  hero: HeroData;
+  about: AboutData;
+  services: ServicesData;
+  portfolio: PortfolioData;
+  process: ProcessData;
+  footer: FooterData;
+}
+
+export const defaultSiteData: SiteData = {
   header: {
     logoText1: "Lê",
     logoText2: "Khiêm",
@@ -10,7 +108,6 @@ export const siteData = {
     ],
     ctaButton: "Liên hệ ngay"
   },
-
   hero: {
     greeting: "👋 Xin chào, tôi là",
     title: "Lê Khiêm",
@@ -21,7 +118,6 @@ export const siteData = {
     primaryBtn: "Xem Dự Án",
     secondaryBtn: "Liên Hệ Ngay"
   },
-
   about: {
     title: "Về",
     titleHighlight: "Tôi",
@@ -36,7 +132,6 @@ export const siteData = {
       { iconName: "Lightbulb", title: "Giải pháp Thực tế", desc: "Tập trung vào hiệu quả chuyển đổi và giải quyết bài toán kinh doanh." }
     ]
   },
-
   services: {
     title: "Các Dịch Vụ",
     titleHighlight: "Cốt Lõi",
@@ -49,7 +144,6 @@ export const siteData = {
       { iconName: "Headset", title: "IT Helpdesk & Hỗ trợ từ xa", desc: "Khắc phục sự cố máy tính, phần mềm, mạng nội bộ chuyên nghiệp. Ưu tiên xử lý nhanh chóng qua kết nối từ xa (Remote)." }
     ]
   },
-
   portfolio: {
     title: "Dự Án",
     titleHighlight: "Tiêu Biểu",
@@ -64,7 +158,6 @@ export const siteData = {
       { id: 6, title: "Event Promo Page", category: "Landing Page", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop" }
     ]
   },
-
   process: {
     title: "Quy Trình",
     titleHighlight: "Làm Việc",
@@ -76,7 +169,6 @@ export const siteData = {
       { iconName: "CheckCircle", title: "4. Bàn giao & Hỗ trợ", desc: "Kiểm thử (Testing) kỹ lưỡng trên nhiều thiết bị, bàn giao mã nguồn và hướng dẫn sử dụng." }
     ]
   },
-
   footer: {
     description: "Chuyên gia thiết kế & phát triển giao diện web, mang đến giải pháp số toàn diện và tối ưu trải nghiệm người dùng.",
     quickLinksTitle: "Liên Kết Nhanh",
@@ -87,3 +179,5 @@ export const siteData = {
     copyright: "Lê Khiêm. All rights reserved."
   }
 };
+
+export const siteData: SiteData = defaultSiteData;

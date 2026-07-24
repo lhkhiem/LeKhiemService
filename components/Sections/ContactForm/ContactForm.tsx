@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Loader2, CheckCircle2 } from 'lucide-react';
+import { useContent } from '@/context/ContentContext';
 import styles from './ContactForm.module.css';
-import { siteData } from '../../../lib/data';
 
 export default function ContactForm() {
+  const { siteData } = useContent();
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 

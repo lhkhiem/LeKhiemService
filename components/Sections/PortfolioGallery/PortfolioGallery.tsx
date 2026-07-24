@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-import { siteData } from '../../../lib/data';
+import { useContent } from '@/context/ContentContext';
 import styles from './PortfolioGallery.module.css';
 
 export default function PortfolioGallery() {
+  const { siteData } = useContent();
   const { portfolio } = siteData;
   const [activeCategory, setActiveCategory] = useState("Tất cả");
 
@@ -47,7 +48,7 @@ export default function PortfolioGallery() {
                 className={styles.projectCard}
               >
                 <div className={styles.projectImage}>
-                  {/* Using standard img for quick mockup, next/image is better for prod */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={project.img} alt={project.title} loading="lazy" />
                   <div className={styles.projectOverlay}>
                     <a href="#" className={styles.viewBtn}>

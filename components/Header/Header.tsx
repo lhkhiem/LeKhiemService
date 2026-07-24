@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { siteData } from '../../lib/data';
+import { useContent } from '@/context/ContentContext';
 import styles from './Header.module.css';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { siteData } = useContent();
   const { header } = siteData;
 
   useEffect(() => {

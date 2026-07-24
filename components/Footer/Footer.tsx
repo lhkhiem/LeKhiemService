@@ -1,8 +1,11 @@
+"use client";
+
 import Link from 'next/link';
-import { siteData } from '../../lib/data';
+import { useContent } from '@/context/ContentContext';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+  const { siteData } = useContent();
   const { footer, header } = siteData;
 
   return (
