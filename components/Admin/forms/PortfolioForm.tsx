@@ -53,6 +53,18 @@ export default function PortfolioForm({ data, onChange }: PortfolioFormProps) {
     onChange({ ...safeData, projects: newProjects });
   };
 
+  const handleTechStackChange = (index: number, value: string) => {
+    const newProjects = [...safeData.projects];
+    const targetProject = newProjects[index];
+    if (targetProject) {
+      newProjects[index] = {
+        ...targetProject,
+        techStack: value.split(',').map((t) => t.trim()).filter(Boolean),
+      };
+    }
+    onChange({ ...safeData, projects: newProjects });
+  };
+
   const addProject = () => {
     const maxId = safeData.projects.reduce((max, p) => {
       const pId = Number(p.id);
@@ -236,6 +248,40 @@ export default function PortfolioForm({ data, onChange }: PortfolioFormProps) {
                     />
                   </div>
                 )}
+              </div>
+
+              <div className={styles.inputGroup}>
+                <label className={styles.inputLabel}>Mô Tả Ngắn (Description)</label>
+                <textarea
+                  className={styles.textInput}
+                  rows={3}
+                  style={{ resize: 'vertical', minHeight: '80px' }}
+                  value={proj.description || ''}
+                  onChange={(e) => handleProjectChange(index, 'description', e.target.value)}
+                  placeholder="Mô tả ngắn về dự án, kết quả đạt được..."
+                />
+              </div>
+
+              <div className={styles.inputGroup}>
+                <label className={styles.inputLabel}>Tech Stack (phân cách bằng dấu phẩy)</label>
+                <input
+                  type="text"
+                  className={styles.textInput}
+                  value={(proj.techStack || []).join(', ')}
+                  onChange={(e) => handleTechStackChange(index, e.target.value)}
+                  placeholder="Next.js, TypeScript, PostgreSQL, ..."
+                />
+              </div>
+
+              <div className={styles.inputGroup}>
+                <label className={styles.inputLabel}>Link Demo Live (để trống nếu không có)</label>
+                <input
+                  type="url"
+                  className={styles.textInput}
+                  value={proj.liveUrl || ''}
+                  onChange={(e) => handleProjectChange(index, 'liveUrl', e.target.value)}
+                  placeholder="https://example.com"
+                />
               </div>
             </div>
           );

@@ -53,6 +53,10 @@ export interface ProjectItem {
   title: string;
   category: string;
   img: string;
+  description?: string;
+  techStack?: string[];
+  liveUrl?: string;
+  gallery?: string[];
 }
 
 export interface PortfolioData {
