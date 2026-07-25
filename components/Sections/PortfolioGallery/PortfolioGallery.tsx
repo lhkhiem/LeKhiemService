@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { useContent } from '@/context/ContentContext';
@@ -11,9 +11,16 @@ export default function PortfolioGallery() {
   const { portfolio } = siteData;
   const [activeCategory, setActiveCategory] = useState("Tất cả");
 
-  const filteredProjects = activeCategory === "Tất cả" 
-    ? portfolio.projects 
-    : portfolio.projects.filter(p => p.category === activeCategory);
+  // Reset activeCategory về "Tất cả" nếu category đang chọn không còn tồn tại
+  useEffect(() => {
+    if (!portfolio.categories.includes(activeCategory)) {
+      setActiveCategory("Tất cả");
+    }
+  }, [portfolio.categories, activeCategory]);
+
+  const filteredProjects = activeCategory === "Tất cả"
+    ? portfolio.projects
+    : portfolio.projects.filter((p) => p.category === activeCategory);
 
   return (
     <section className={`section-padding ${styles.portfolio}`} id="portfolio">

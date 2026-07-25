@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useContent } from '@/context/ContentContext';
 import { SiteData } from '@/lib/data';
 import styles from '@/components/Admin/Admin.module.css';
@@ -31,13 +31,18 @@ export default function AdminPage() {
 
   const [activeTab, setActiveTab] = useState<AdminTab>('header');
   const [draftData, setDraftData] = useState<SiteData>(siteData);
-  const [prevSiteData, setPrevSiteData] = useState<SiteData>(siteData);
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
 
-  if (siteData !== prevSiteData) {
-    setPrevSiteData(siteData);
-    setDraftData(siteData);
-  }
+  // Track whether draftData has been initialized from fetched data
+  const initializedRef = useRef(false);
+
+  // Sync draftData with siteData only on first load (when data is fetched from server)
+  useEffect(() => {
+    if (!isLoading && !initializedRef.current) {
+      initializedRef.current = true;
+      setDraftData(siteData);
+    }
+  }, [isLoading, siteData]);
 
   const showToast = (message: string, type: 'success' | 'error') => {
     setToast({ message, type });
