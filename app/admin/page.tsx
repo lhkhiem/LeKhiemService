@@ -18,12 +18,15 @@ import { Save, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 export default function AdminPage() {
   const { siteData, isLoading, isSaving, saveData, resetToDefault } = useContent();
 
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      return sessionStorage.getItem('admin_authenticated') === 'true';
+  const [isMounted, setIsMounted] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+    if (sessionStorage.getItem('admin_authenticated') === 'true') {
+      setIsAuthenticated(true);
     }
-    return false;
-  });
+  }, []);
 
   const [passwordInput, setPasswordInput] = useState<string>('');
   const [authError, setAuthError] = useState<string>('');
@@ -100,6 +103,10 @@ export default function AdminPage() {
       showToast('Lỗi khôi phục dữ liệu!', 'error');
     }
   };
+
+  if (!isMounted) {
+    return null;
+  }
 
   if (!isAuthenticated) {
     return (

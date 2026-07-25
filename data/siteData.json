@@ -44,7 +44,7 @@
       {
         "iconName": "Layout",
         "title": "Thiết kế Độc bản",
-        "desc": "Giao diện được thiết kế may đo riêng biệt, không dùng template rập khuôn."
+        "desc": "Giao diện được thiết kế may đo riêng biệt, không dùng template rập khuôn. Tuỳ biến mạnh mẻ"
       },
       {
         "iconName": "Code",
@@ -69,9 +69,9 @@
         "desc": "Tạo ra các trang web tương thích hoàn hảo trên mọi thiết bị, từ điện thoại đến màn hình desktop siêu lớn."
       },
       {
-        "iconName": "Palette",
-        "title": "UI/UX & Branding",
-        "desc": "Nghiên cứu và thiết kế trải nghiệm người dùng, mang lại giao diện trực quan, bắt mắt và giữ chân khách hàng."
+        "iconName": "PenTool",
+        "title": "Dựng Website từ ý tưởng",
+        "desc": "Biến ý tưởng mơ hồ thành sản phẩm thật chạy trên đa nền tảng."
       },
       {
         "iconName": "Search",
@@ -103,57 +103,48 @@
     "projects": [
       {
         "id": 1,
-        "title": "E-Commerce Platform",
+        "title": "Website Công ty máy văn phòng Liên Nghi",
         "category": "Website",
-        "img": "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=1064&auto=format&fit=crop",
+        "img": "https://tptrp0ykrgonzu0n.public.blob.vercel-storage.com/liennghi.png",
         "description": "Nền tảng thương mại điện tử toàn diện với hệ thống quản lý sản phẩm, giỏ hàng, thanh toán online và dashboard quản trị doanh thu. Tối ưu tốc độ tải trang và trải nghiệm mua sắm trên mọi thiết bị.",
-        "techStack": ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Prisma"],
-        "liveUrl": null
+        "techStack": [
+          "Next.js",
+          "TypeScript",
+          "Stripe",
+          "PostgreSQL",
+          "Prisma"
+        ],
+        "liveUrl": "https://liennghi.com"
       },
       {
         "id": 2,
-        "title": "Fintech Dashboard",
-        "category": "UI/UX App",
-        "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-        "description": "Bảng điều khiển tài chính real-time với biểu đồ tương tác, theo dõi danh mục đầu tư, cảnh báo giá và báo cáo tài chính tự động. Giao diện tối giản, dữ liệu trực quan.",
-        "techStack": ["React", "TypeScript", "Recharts", "Node.js", "WebSocket"],
-        "liveUrl": null
-      },
-      {
-        "id": 3,
-        "title": "SaaS Landing Page",
-        "category": "Landing Page",
-        "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-        "description": "Landing page chuyển đổi cao cho sản phẩm SaaS — thiết kế tối ưu CRO, A/B test sections, tích hợp form lead capture và analytics tracking. Đạt tỷ lệ chuyển đổi vượt trung bình ngành.",
-        "techStack": ["Next.js", "Framer Motion", "Google Analytics", "HubSpot"],
-        "liveUrl": null
+        "title": "Website spa Banyco",
+        "category": "Website",
+        "img": "https://tptrp0ykrgonzu0n.public.blob.vercel-storage.com/banyco.png",
+        "description": "Thiết từ ý tưởng khách hàng, dựng UX/UI, xây admin chuyên dùng cho ngành spa. Thanh toán trực tuyến qua zaloPay",
+        "techStack": [
+          "React",
+          "TypeScript",
+          "Recharts",
+          "Node.js",
+          "WebSocket"
+        ],
+        "liveUrl": "https://banyco.vn"
       },
       {
         "id": 4,
-        "title": "Real Estate Portal",
+        "title": "Website bất đông sản Inlandv",
         "category": "Website",
-        "img": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop",
-        "description": "Cổng thông tin bất động sản với tìm kiếm lọc nâng cao, bản đồ tương tác, gallery ảnh 360°, so sánh dự án và công cụ tính toán vay vốn ngân hàng.",
-        "techStack": ["Next.js", "Mapbox GL", "Cloudinary", "MongoDB", "REST API"],
-        "liveUrl": null
-      },
-      {
-        "id": 5,
-        "title": "Health Tracker App",
-        "category": "UI/UX App",
-        "img": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop",
-        "description": "Ứng dụng theo dõi sức khỏe cá nhân — nhật ký dinh dưỡng, lịch tập luyện, giấc ngủ và nhịp tim. Tích hợp thông báo nhắc nhở và báo cáo sức khỏe hàng tuần bằng biểu đồ sinh động.",
-        "techStack": ["React Native", "TypeScript", "Firebase", "HealthKit API"],
-        "liveUrl": null
-      },
-      {
-        "id": 6,
-        "title": "Event Promo Page",
-        "category": "Landing Page",
-        "img": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop",
-        "description": "Trang quảng bá sự kiện với đếm ngược thời gian, đăng ký vé online, lịch trình sự kiện động và tích hợp chia sẻ mạng xã hội. Thiết kế ấn tượng thu hút hàng nghìn lượt đăng ký.",
-        "techStack": ["Next.js", "Framer Motion", "Resend Email", "Supabase"],
-        "liveUrl": null
+        "img": "https://tptrp0ykrgonzu0n.public.blob.vercel-storage.com/inlandv.png",
+        "description": "Cổng thông tin bất động sản với tìm kiếm lọc nâng cao, bản đồ tương tác, đa ngôn ngữ",
+        "techStack": [
+          "Next.js",
+          "Mapbox GL",
+          "Cloudinary",
+          "MongoDB",
+          "REST API"
+        ],
+        "liveUrl": "https://inlandv.com"
       },
       {
         "id": 7,
@@ -161,8 +152,14 @@
         "category": "UI/UX App",
         "img": "https://tptrp0ykrgonzu0n.public.blob.vercel-storage.com/hgmanager.png",
         "description": "Hệ thống quản lý kỹ thuật viên và lịch bảo trì thiết bị công nghiệp. Phân công công việc tự động, theo dõi tiến độ real-time, xuất báo cáo PDF và thống kê hiệu suất đội ngũ. Đang được triển khai thực tế.",
-        "techStack": ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Vercel"],
-        "liveUrl": "https://hgmanager.vercel.app"
+        "techStack": [
+          "Next.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Prisma",
+          "Vercel"
+        ],
+        "liveUrl": "https://hgmanager.lekhiem.io.vn"
       }
     ]
   },
