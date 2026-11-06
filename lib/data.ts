@@ -116,50 +116,51 @@ export const defaultSiteData: SiteData = {
     greeting: "👋 Xin chào, tôi là",
     title: "Lê Khiêm",
     subtitle: "Chuyên gia Kiến tạo",
-    subtitleHighlight: "Giao diện Số",
-    subtitleEnd: "& Dịch vụ IT Helpdesk",
-    description: "Tôi thiết kế và phát triển các trang web hiện đại, tối ưu tốc độ và cung cấp dịch vụ IT Helpdesk chuyên nghiệp. Giúp cá nhân/doanh nghiệp nâng tầm hiện diện và vận hành trơn tru, bứt phá trong kỷ nguyên số.",
+    subtitleHighlight: "Giải Pháp Số & Phần Mềm",
+    subtitleEnd: "| Web, App Windows & Tool Quản Lý",
+    description: "Tôi thiết kế và phát triển Website hiện đại, xây dựng App Windows, Tool tự động hóa và phần mềm quản lý theo yêu cầu. Đồng thời cung cấp dịch vụ IT Helpdesk chuyên nghiệp giúp cá nhân và doanh nghiệp tối ưu vận hành, bứt phá năng suất.",
     primaryBtn: "Xem Dự Án",
     secondaryBtn: "Liên Hệ Ngay"
   },
   about: {
     title: "Về",
     titleHighlight: "Tôi",
-    subtitle: "Kết hợp thẩm mỹ thiết kế và tư duy lập trình",
+    subtitle: "Kết hợp tư duy thẩm mỹ, thuật toán và giải pháp thực tế",
     paragraphs: [
-      "Với kinh nghiệm trong lĩnh vực phát triển Web, tôi không chỉ viết code mà còn tạo ra trải nghiệm. Tôi tin rằng một giao diện đẹp phải đi đôi với hiệu năng tối ưu và cấu trúc chặt chẽ.",
-      "Mục tiêu của tôi là giúp các cá nhân và doanh nghiệp xây dựng sự hiện diện mạnh mẽ, chuyên nghiệp trên nền tảng số thông qua những sản phẩm vượt trên cả sự mong đợi."
+      "Với kinh nghiệm trong lĩnh vực phát triển Web, ứng dụng Desktop Windows và phần mềm quản lý, tôi không chỉ viết code mà còn mang đến giải pháp toàn diện. Tôi tin rằng một phần mềm tốt phải đi đôi với sự trực quan, vận hành ổn định và tối ưu hiệu suất công việc.",
+      "Mục tiêu của tôi là giúp các cá nhân và doanh nghiệp tối ưu hóa quy trình thủ công, số hóa dữ liệu và sở hữu những công cụ phần mềm may đo chuẩn xác theo từng bài toán thực tế."
     ],
     coreValues: [
-      { iconName: "Layout", title: "Thiết kế Độc bản", desc: "Giao diện được thiết kế may đo riêng biệt, không dùng template rập khuôn." },
-      { iconName: "Code", title: "Code Sạch & Tối ưu", desc: "Chuẩn SEO, tốc độ tải trang nhanh nhạy trên mọi thiết bị di động." },
-      { iconName: "Lightbulb", title: "Giải pháp Thực tế", desc: "Tập trung vào hiệu quả chuyển đổi và giải quyết bài toán kinh doanh." }
+      { iconName: "Layout", title: "Thiết kế Độc bản", desc: "Giao diện được thiết kế may đo riêng biệt, không dùng template rập khuôn. Tùy biến linh hoạt." },
+      { iconName: "Code", title: "Code Sạch & Tối ưu", desc: "Chuẩn hiệu năng cao, bảo mật, vận hành mượt mà trên cả trình duyệt và máy tính Windows." },
+      { iconName: "Lightbulb", title: "Giải pháp Thực tế", desc: "Tập trung giải quyết bài toán vận hành, tiết kiệm thời gian và nâng cao hiệu quả kinh doanh." }
     ]
   },
   services: {
     title: "Các Dịch Vụ",
     titleHighlight: "Cốt Lõi",
-    subtitle: "Những gì tôi có thể làm để giúp dự án của bạn cất cánh.",
+    subtitle: "Những gì tôi có thể làm để giúp dự án và doanh nghiệp của bạn cất cánh.",
     items: [
-      { iconName: "MonitorSmartphone", title: "Thiết kế Web Responsive", desc: "Tạo ra các trang web tương thích hoàn hảo trên mọi thiết bị, từ điện thoại đến màn hình desktop siêu lớn." },
-      { iconName: "Palette", title: "UI/UX & Branding", desc: "Nghiên cứu và thiết kế trải nghiệm người dùng, mang lại giao diện trực quan, bắt mắt và giữ chân khách hàng." },
-      { iconName: "Search", title: "Tối ưu chuẩn SEO", desc: "Cấu trúc website thân thiện với bộ máy tìm kiếm (Google), giúp tăng thứ hạng tự nhiên cho doanh nghiệp." },
-      { iconName: "Rocket", title: "Tối ưu Hiệu năng (Speed)", desc: "Áp dụng các công nghệ hiện đại nhất (Next.js, Server Components) để web load trong nháy mắt." },
-      { iconName: "Headset", title: "IT Helpdesk & Hỗ trợ từ xa", desc: "Khắc phục sự cố máy tính, phần mềm, mạng nội bộ chuyên nghiệp. Ưu tiên xử lý nhanh chóng qua kết nối từ xa (Remote)." }
+      { iconName: "MonitorSmartphone", title: "Thiết kế Website & WebApp", desc: "Xây dựng các website thương mại, landing page, webapp hiện đại với trải nghiệm mượt mà trên mọi thiết bị." },
+      { iconName: "AppWindow", title: "Lập trình App Windows & Desktop", desc: "Phát triển ứng dụng desktop Windows (.NET, C#, Electron, Tauri...), giao diện hiện đại, tốc độ cao, hoạt động mượt mà online/offline." },
+      { iconName: "Database", title: "Phần Mềm Quản Lý May Đo", desc: "Xây dựng phần mềm quản lý bán hàng, kho bãi, nhân sự, lịch bảo trì (CRM/ERP mini) theo đúng quy trình thực tế của bạn." },
+      { iconName: "Bot", title: "Tool Tự Động Hóa & Tiện Ích", desc: "Viết tool auto tác vụ, thu thập dữ liệu (crawler), xử lý và đồng bộ file Excel/PDF hàng loạt giúp tiết kiệm hàng chục giờ làm việc thủ công." },
+      { iconName: "Rocket", title: "Tối ưu Tốc độ & Chuẩn SEO", desc: "Tối ưu hóa mã nguồn, tăng tốc độ tải trang, nâng cao trải nghiệm người dùng và thứ hạng trên công cụ tìm kiếm." },
+      { iconName: "Headset", title: "IT Helpdesk & Hỗ trợ Kỹ thuật", desc: "Khắc phục sự cố máy tính, phần mềm, mạng nội bộ chuyên nghiệp. Xử lý nhanh chóng qua kết nối từ xa (Remote)." }
     ]
   },
   portfolio: {
     title: "Dự Án",
     titleHighlight: "Tiêu Biểu",
-    subtitle: "Khám phá những sản phẩm tôi đã thực hiện.",
-    categories: ["Tất cả", "Website", "UI/UX App", "Landing Page"],
+    subtitle: "Khám phá những sản phẩm và giải pháp tôi đã thực hiện.",
+    categories: ["Tất cả", "Website", "UI/UX App", "App Windows & Tool", "Phần Mềm Quản Lý"],
     projects: [
       { id: 1, title: "E-Commerce Platform", category: "Website", img: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=1064&auto=format&fit=crop" },
       { id: 2, title: "Fintech Dashboard", category: "UI/UX App", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
-      { id: 3, title: "SaaS Landing Page", category: "Landing Page", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" },
+      { id: 3, title: "SaaS Landing Page", category: "Website", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" },
       { id: 4, title: "Real Estate Portal", category: "Website", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop" },
       { id: 5, title: "Health Tracker App", category: "UI/UX App", img: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop" },
-      { id: 6, title: "Event Promo Page", category: "Landing Page", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop" }
+      { id: 6, title: "Quản lý Bán hàng & Kho Windows", category: "App Windows & Tool", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" }
     ]
   },
   process: {
@@ -174,7 +175,7 @@ export const defaultSiteData: SiteData = {
     ]
   },
   footer: {
-    description: "Chuyên gia thiết kế & phát triển giao diện web, mang đến giải pháp số toàn diện và tối ưu trải nghiệm người dùng.",
+    description: "Chuyên gia phát triển Website, App Windows, Tool tự động hoá và Phần mềm quản lý theo yêu cầu, mang đến giải pháp số toàn diện tối ưu hiệu suất.",
     quickLinksTitle: "Liên Kết Nhanh",
     contactTitle: "Liên Hệ",
     email: "hoangkhiem.dev@gmail.com",

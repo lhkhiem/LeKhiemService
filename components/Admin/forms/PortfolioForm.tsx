@@ -15,7 +15,7 @@ export default function PortfolioForm({ data, onChange }: PortfolioFormProps) {
     title: data?.title || '',
     titleHighlight: data?.titleHighlight || '',
     subtitle: data?.subtitle || '',
-    categories: data?.categories || ['Tất cả', 'Website', 'UI/UX App', 'Landing Page'],
+    categories: data?.categories || ['Tất cả', 'Website', 'UI/UX App', 'App Windows & Tool', 'Phần Mềm Quản Lý'],
     projects: data?.projects || [],
   };
 

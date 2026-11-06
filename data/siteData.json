@@ -26,62 +26,67 @@
     "greeting": "👋 Xin chào, tôi là",
     "title": "Lê Khiêm",
     "subtitle": "Chuyên gia Kiến tạo",
-    "subtitleHighlight": "Giao diện Số",
-    "subtitleEnd": "& Dịch vụ IT",
-    "description": "Tôi thiết kế và phát triển các trang web hiện đại, tối ưu tốc độ và trải nghiệm người dùng.\nTôi cũng cung cấp dịch vụ IT Support/Helpdesk . Giúp cá nhân/doanh nghiệp nâng tầm hiện diện và vận hành trơn tru, bứt phá trong kỷ nguyên số.",
+    "subtitleHighlight": "Giải Pháp Số & Phần Mềm",
+    "subtitleEnd": "| Web, Windows App & IT Services",
+    "description": "Tôi thiết kế và phát triển Website hiện đại, xây dựng App Windows, Tool tự động hóa và phần mềm quản lý theo yêu cầu.\nĐồng thời cung cấp dịch vụ IT Support/Helpdesk chuyên nghiệp giúp cá nhân và doanh nghiệp tối ưu vận hành, bứt phá năng suất.",
     "primaryBtn": "Xem Dự Án",
     "secondaryBtn": "Liên Hệ Ngay"
   },
   "about": {
     "title": "Về",
     "titleHighlight": "Tôi",
-    "subtitle": "Kết hợp thẩm mỹ thiết kế và tư duy lập trình",
+    "subtitle": "Kết hợp tư duy thẩm mỹ, kỹ thuật lập trình và giải pháp thực tế",
     "paragraphs": [
-      "Với kinh nghiệm trong lĩnh vực phát triển Web, tôi không chỉ viết code mà còn tạo ra trải nghiệm. Tôi tin rằng một giao diện đẹp phải đi đôi với hiệu năng tối ưu và cấu trúc chặt chẽ.",
-      "Mục tiêu của tôi là giúp các cá nhân và doanh nghiệp xây dựng sự hiện diện mạnh mẽ, chuyên nghiệp trên nền tảng số thông qua những sản phẩm vượt trên cả sự mong đợi."
+      "Với kinh nghiệm trong lĩnh vực phát triển Web, ứng dụng Desktop Windows và phần mềm quản lý, tôi không chỉ viết code mà còn mang đến giải pháp toàn diện. Tôi tin rằng một phần mềm tốt phải đi đôi với sự trực quan, vận hành ổn định và tối ưu hiệu suất công việc.",
+      "Mục tiêu của tôi là giúp các cá nhân và doanh nghiệp tối ưu hóa quy trình thủ công, số hóa dữ liệu và sở hữu những công cụ phần mềm may đo chuẩn xác theo từng bài toán thực tế."
     ],
     "coreValues": [
       {
         "iconName": "Layout",
         "title": "Thiết kế Độc bản",
-        "desc": "Giao diện được thiết kế may đo riêng biệt, không dùng template rập khuôn. Tuỳ biến mạnh mẻ"
+        "desc": "Giao diện được thiết kế may đo riêng biệt, không dùng template rập khuôn. Tùy biến linh hoạt theo yêu cầu."
       },
       {
         "iconName": "Code",
         "title": "Code Sạch & Tối ưu",
-        "desc": "Chuẩn SEO, tốc độ tải trang nhanh nhạy trên mọi thiết bị di động."
+        "desc": "Chuẩn SEO, hiệu năng cao, vận hành nhanh nhạy và ổn định trên cả trình duyệt lẫn môi trường Windows."
       },
       {
         "iconName": "Lightbulb",
         "title": "Giải pháp Thực tế",
-        "desc": "Tập trung vào hiệu quả chuyển đổi và giải quyết bài toán kinh doanh."
+        "desc": "Tập trung giải quyết bài toán vận hành, tiết kiệm thời gian và nâng cao hiệu quả kinh doanh."
       }
     ]
   },
   "services": {
     "title": "Các Dịch Vụ",
     "titleHighlight": "Cốt Lõi",
-    "subtitle": "Những gì tôi có thể làm để giúp dự án của bạn cất cánh.",
+    "subtitle": "Những gì tôi có thể làm để giúp dự án và doanh nghiệp của bạn cất cánh.",
     "items": [
       {
         "iconName": "MonitorSmartphone",
-        "title": "Thiết kế Web Responsive",
-        "desc": "Tạo ra các trang web tương thích hoàn hảo trên mọi thiết bị, từ điện thoại đến màn hình desktop siêu lớn."
+        "title": "Thiết kế Website & WebApp",
+        "desc": "Xây dựng website bán hàng, landing page, webapp tương thích hoàn hảo trên mọi thiết bị di động và desktop."
       },
       {
-        "iconName": "PenTool",
-        "title": "Dựng Website từ ý tưởng",
-        "desc": "Biến ý tưởng mơ hồ thành sản phẩm thật chạy trên đa nền tảng."
+        "iconName": "AppWindow",
+        "title": "Lập trình App Windows & Desktop",
+        "desc": "Phát triển phần mềm chạy trực tiếp trên Windows (.NET, C#, Electron...), giao diện hiện đại, tối ưu tốc độ, chạy mượt mà ngay cả khi offline."
       },
       {
-        "iconName": "Search",
-        "title": "Tối ưu chuẩn SEO",
-        "desc": "Cấu trúc website thân thiện với bộ máy tìm kiếm (Google), giúp tăng thứ hạng tự nhiên cho doanh nghiệp."
+        "iconName": "Database",
+        "title": "Phần mềm Quản lý Theo Yêu Cầu",
+        "desc": "Thiết kế hệ thống quản lý bán hàng, kho bãi, nhân sự, lịch bảo trì kỹ thuật (CRM/ERP mini) may đo sát theo quy trình của bạn."
+      },
+      {
+        "iconName": "Bot",
+        "title": "Tool Tự Động Hóa & Tiện Ích",
+        "desc": "Xây dựng tool tự động hóa thao tác lặp lại, bot cào dữ liệu (crawler), xử lý và đồng bộ file Excel/PDF hàng loạt nhanh chóng."
       },
       {
         "iconName": "Rocket",
-        "title": "Tối ưu Hiệu năng (Speed)",
-        "desc": "Áp dụng các công nghệ hiện đại nhất (Next.js, Server Components) để web load trong nháy mắt."
+        "title": "Tối ưu Hiệu năng (Speed) & SEO",
+        "desc": "Áp dụng các công nghệ hiện đại nhất (Next.js, Server Components), tối ưu code và SEO để website tải cực nhanh và dễ lên top Google."
       },
       {
         "iconName": "Headset",
@@ -93,12 +98,13 @@
   "portfolio": {
     "title": "Dự Án",
     "titleHighlight": "Tiêu Biểu",
-    "subtitle": "Khám phá những sản phẩm tôi đã thực hiện.",
+    "subtitle": "Khám phá những sản phẩm và giải pháp tôi đã thực hiện.",
     "categories": [
       "Tất cả",
       "Website",
       "UI/UX App",
-      "Landing Page"
+      "App Windows & Tool",
+      "Phần Mềm Quản Lý"
     ],
     "projects": [
       {
@@ -149,7 +155,7 @@
       {
         "id": 7,
         "title": "WebApp quản lý kỹ thuật, bảo trì",
-        "category": "UI/UX App",
+        "category": "Phần Mềm Quản Lý",
         "img": "https://tptrp0ykrgonzu0n.public.blob.vercel-storage.com/hgmanager.png",
         "description": "Hệ thống quản lý kỹ thuật viên và lịch bảo trì thiết bị công nghiệp. Phân công công việc tự động, theo dõi tiến độ real-time, xuất báo cáo PDF và thống kê hiệu suất đội ngũ. Đang được triển khai thực tế.",
         "techStack": [
@@ -160,6 +166,33 @@
           "Vercel"
         ],
         "liveUrl": "https://hgmanager.lekhiem.io.vn"
+      },
+      {
+        "id": 8,
+        "title": "Phần mềm Quản lý Bán hàng & In Bill (Windows Desktop)",
+        "category": "App Windows & Tool",
+        "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+        "description": "Ứng dụng Windows chuyên dụng cho cửa hàng bán lẻ: quản lý tồn kho thời gian thực, quét mã vạch barcode, in hóa đơn nhiệt siêu tốc, phân quyền nhân viên và hoạt động độc lập ngay cả khi mất kết nối internet.",
+        "techStack": [
+          "C# .NET",
+          "WPF / WinForms",
+          "SQLite",
+          "ESC/POS Thermal Printer"
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Tool Tự Động Hóa Xử Lý Báo Cáo & Dữ Liệu Excel",
+        "category": "App Windows & Tool",
+        "img": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop",
+        "description": "Công cụ chạy trên Windows tự động đọc và gộp hàng trăm file Excel, bóc tách hóa đơn, phát hiện sai sót số liệu và xuất báo cáo tổng hợp chỉ trong vài giây, thay thế hàng chục giờ thao tác thủ công.",
+        "techStack": [
+          "Python / C#",
+          "PyQt GUI",
+          "Pandas",
+          "OpenPyXL",
+          "Windows App"
+        ]
       }
     ]
   },
@@ -171,27 +204,27 @@
       {
         "iconName": "Search",
         "title": "1. Khảo sát & Tư vấn",
-        "desc": "Tìm hiểu yêu cầu, phân tích mục tiêu kinh doanh và đề xuất giải pháp kỹ thuật tối ưu nhất."
+        "desc": "Tìm hiểu yêu cầu, phân tích bài toán thực tế và đề xuất giải pháp kỹ thuật tối ưu nhất."
       },
       {
         "iconName": "PenTool",
-        "title": "2. Phác thảo (UI/UX)",
-        "desc": "Thiết kế wireframe, mockup và prototype để thống nhất giao diện trước khi lập trình."
+        "title": "2. Thiết kế Giao diện & Kiến trúc",
+        "desc": "Lên phác thảo UI/UX (cho Web/App) và thiết kế luồng dữ liệu, cơ sở dữ liệu trước khi lập trình."
       },
       {
         "iconName": "Code",
-        "title": "3. Tinh chỉnh kỹ thuật",
-        "desc": "Lập trình frontend/backend, tối ưu hiệu năng, SEO và các hiệu ứng chuyển động mượt mà."
+        "title": "3. Lập trình & Tối ưu",
+        "desc": "Phát triển tính năng, kiểm thử hiệu năng, xử lý lỗi ngoại lệ và tối ưu tốc độ xử lý."
       },
       {
         "iconName": "CheckCircle",
-        "title": "4. Bàn giao & Hỗ trợ",
-        "desc": "Kiểm thử (Testing) kỹ lưỡng trên nhiều thiết bị, bàn giao mã nguồn và hướng dẫn sử dụng."
+        "title": "4. Bàn giao & Bảo hành",
+        "desc": "Đóng gói bộ cài đặt / deploy production, bàn giao hướng dẫn sử dụng và hỗ trợ kỹ thuật lâu dài."
       }
     ]
   },
   "footer": {
-    "description": "Chuyên gia thiết kế & phát triển giao diện web, mang đến giải pháp số toàn diện và tối ưu trải nghiệm người dùng.",
+    "description": "Chuyên gia phát triển Website, App Windows, Tool tự động hoá và Phần mềm quản lý theo yêu cầu, mang đến giải pháp số toàn diện tối ưu hiệu suất.",
     "quickLinksTitle": "Liên Kết Nhanh",
     "contactTitle": "Liên Hệ",
     "email": "hoangkhiem.dev@gmail.com",
